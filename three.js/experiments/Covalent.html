@@ -15,10 +15,12 @@
 -->
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
+    	<h1>Hello world!</h1>
+	<a-scene embedded arjs>
         <a-marker preset="hiro">
-            <a-entity collada-model=”url(axe.dae)”>
-            </a-entity>
+			<a-assets>
+            <a-asset-item id="tree" src="https://aframe.io/aframe/examples/assets/models/tree1/tree1.dae"></a-asset-item>
+			</a-assets>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
