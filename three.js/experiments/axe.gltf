@@ -1,0 +1,127 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5123,
+            "count" : 1137,
+            "max" : [
+                710
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 711,
+            "max" : [
+                0.3104643225669861,
+                0.3761483430862427,
+                1.5862141847610474
+            ],
+            "min" : [
+                -0.3082907199859619,
+                -6.874177932739258,
+                -0.8652745485305786
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 711,
+            "max" : [
+                0.9992461204528809,
+                0.9999999403953552,
+                0.9951847791671753
+            ],
+            "min" : [
+                -0.9997021555900574,
+                -1.0,
+                -0.999144971370697
+            ],
+            "type" : "VEC3"
+        }
+    ],
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 2274,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8532,
+            "byteOffset" : 2276,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8532,
+            "byteOffset" : 10808,
+            "target" : 34962
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 19340,
+            "uri" : "axe.bin"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "Material",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.640000066757203,
+                    0.010685563246690677,
+                    0.0002449703904981969,
+                    1.0
+                ],
+                "metallicFactor" : 0.0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2,
+                        "POSITION" : 1
+                    },
+                    "indices" : 0,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cube",
+            "translation" : [
+                -0.029492676258087158,
+                7.047301292419434,
+                0.478912353515625
+            ]
+        }
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ]
+}
