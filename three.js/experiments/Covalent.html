@@ -18,12 +18,15 @@
 <body style='margin : 0px; overflow: hidden;'>
 
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
-		<a-marker preset="hiro">
-			<a-entity id="model">
-				<a-model src="http://wafi.iit.cnr.it/smartarea/data/cnr.dae"></a-model>
-			</a-entity>
+	<a-assets>
+	<a-asset-item id="axe" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/axe.dae"></a-asset-item>
+	</a-assets>
+        <a-marker preset="hiro">
+         <a-entity collada-model="#axe" >
+		  
+		 </a-entity>
         </a-marker>
-    <a-entity camera></a-entity>
+        <a-entity camera></a-entity>
     </a-scene>
 </body>
 </html>
