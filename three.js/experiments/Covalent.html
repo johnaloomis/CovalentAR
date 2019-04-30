@@ -2,7 +2,7 @@
 <html>
 
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
 <!--
     aframe-extras loaders is needed in order to add glTF models (And a whole lot of other model formats) into your AR Project.
 
@@ -23,7 +23,8 @@
 	</a-assets>
         <a-marker preset="hiro">
          <a-entity>
-		 <a-model collada-model="#axe"></a-model>
+		 <a-collada-model src="#axe" scale="2.5 2.5 2.5" >
+		 </a-collada-model>
 		  
 		 </a-entity>
         </a-marker>
