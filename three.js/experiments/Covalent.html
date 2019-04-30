@@ -1,7 +1,7 @@
 <!doctype HTML>
 <html>
 
-<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
 
 <!--
     aframe-extras loaders is needed in order to add glTF models (And a whole lot of other model formats) into your AR Project.
@@ -15,6 +15,7 @@
 -->
 <!--https://blog.theodo.com/2018/09/build-first-ar-web-app-less-10mn/ -->
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 	<a-assets>
@@ -22,7 +23,7 @@
 	</a-assets>
         <a-marker preset="hiro">
          <a-entity gltf-model="#axe" rotation=" 180 0 0">
-         <a-entity gltf-model="#axe" >
+         </a-entity gltf-model="#axe" >
 
 		 </a-entity>
         </a-marker>
