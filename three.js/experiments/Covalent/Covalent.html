@@ -19,10 +19,12 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
-		<a-marker-camera type='pattern' patternUrl='https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/pattern-marker.patt'></a-marker-camera>
-        <a-marker type='pattern' patternUrl='https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/pattern-marker.patt'>
-         <a-entity gtlf-model="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf" animation-mixer="loop: repeat">
+		
+        <a-marker type='pattern' url='https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/pattern-marker.patt'>
+ <!--        <a-entity gtlf-model="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf" animation-mixer="loop: repeat">
          </a-entity>
+		 -->
+		 <a-box position='0 0.5 0' material='color: yellow;'></a-box>
 
 
         </a-marker>
