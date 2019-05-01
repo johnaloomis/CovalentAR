@@ -16,14 +16,19 @@
 <!--https://blog.theodo.com/2018/09/build-first-ar-web-app-less-10mn/ -->
 <script src="https://johnaloomis.github.io/CovalentAR/aframe/build/aframe-ar.js"></script>
 
+
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 	<a-assets>
 	<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/axe.gltf?version=f12cead22fb7b7d822eb2a6fc267ef8716562897"></a-asset-item>
 	</a-assets>
         <a-marker preset="hiro">
-         <a-entity gltf-model="#logo" play-on-scan="clip: Axe">
+         <a-entity gltf-model="#logo"  animation-mixer="clip: loop">
          </a-entity>
+
+
+
+
 
 		 </a-entity>
         </a-marker>
