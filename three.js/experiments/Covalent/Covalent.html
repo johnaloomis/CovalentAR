@@ -15,15 +15,20 @@
 -->
 <!--https://blog.theodo.com/2018/09/build-first-ar-web-app-less-10mn/ -->
 <script src="https://johnaloomis.github.io/CovalentAR/aframe/build/aframe-ar.js"></script>
-<script src="https://github.com/donmccurdy/aframe-extras/tree/master/src/loaders/animation-mixer.js"></script>
+
 
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 
-        <a-marker preset="hiro">
-		<a-gltf-model src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/axe.gltf?version=f12cead22fb7b7d822eb2a6fc267ef8716562897" animation-mixer= "loop:repeat"> </a-gltf-model>
+        <a-marker type='pattern' patternUrl='https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/pattern-marker.patt'>
+         <a-entity gtlf-model="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf" animation-mixer="loop: repeat">
+         </a-entity>
 
 
+
+
+
+		 </a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
