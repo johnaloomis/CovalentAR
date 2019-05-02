@@ -1,0 +1,38 @@
+<!doctype HTML>
+<html>
+
+<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+
+<!--
+    aframe-extras loaders is needed in order to add glTF models (And a whole lot of other model formats) into your AR Project.
+
+    If your project requires multiple model types to be inluded use aframe-extras.loaders.min.js
+    Get it here: https://github.com/donmccurdy/aframe-extras/tree/master/dist
+
+    If your project only requires one model format to be included, use the specific library you require
+    Get it here: https://github.com/donmccurdy/aframe-extras/tree/master/src/loaders
+    NOTE: From aframe 0.7.0 glTF 2.0 will be directly supported and would not require any seperate loader files.
+-->
+<!--https://blog.theodo.com/2018/09/build-first-ar-web-app-less-10mn/ -->
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<script src="https://johnaloomis.github.io/CovalentAR/aframe/build/aframe-ar.js"></script>
+
+
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
+		<a-assets>
+			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf"></a-asset-item>
+		</a-assets>
+        <a-marker preset='pattern' type='pattern' url='pattern-marker.patt'>
+			<a-entity gltf-model="#logo" animation-mixer="clip: CubeAction">
+
+			</a-entity>
+			
+			
+
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
