@@ -20,10 +20,10 @@
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 		<a-assets>
-			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/CovalentLogo/Covalentlogo.gltf"></a-asset-item>
+			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/CovalentLogo/Covalentlogo.gltf?version=f64fce1"></a-asset-item>
 		</a-assets>
-        <a-marker preset='pattern' type='pattern' url='pattern-marker.patt?version=f64fce1'>
-			<a-entity gltf-model="#logo" rotation="90 0 0">
+        <a-marker preset='pattern' type='pattern' url='pattern-marker.patt'>
+			<a-entity gltf-model="#logo">
 				<a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite">
 				</a-animation>
 			</a-entity>
