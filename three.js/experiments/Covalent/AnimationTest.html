@@ -16,29 +16,12 @@
 <!--https://blog.theodo.com/2018/09/build-first-ar-web-app-less-10mn/ -->
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 <script src="https://johnaloomis.github.io/CovalentAR/aframe/build/aframe-ar.js"></script>
-	<script>
-		var pause = new Boolean(false);
-		document.querySelector("button").addEventListener("click", (e)=>{			
-			pause = Boolean(pause);
-			if(pause)
-			{
-				document.getElementById('logo').setAttribute('animation-mixer', {timeScale: 0});
-			}
-			else
-			{
-				document.getElementById('logo').setAttribute('animation-mixer', {timeScale: 1});
-			}
-		});
-	</script>
+
 
 
 
 <body style='margin : 0px; overflow: hidden;'>
-	    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-			<button>
-				Stop
-			</button>
-		</div>
+
     <a-scene stats embedded arjs='trackingMethod: best'>
 		<a-assets>
 			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf?version=96e38c4"></a-asset-item>

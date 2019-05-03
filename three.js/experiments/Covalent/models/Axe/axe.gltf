@@ -198,6 +198,32 @@
             "uri" : "axe.bin"
         }
     ],
+    "materials" : [
+        {
+            "name" : "Metal.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.121858741668742,
+                    0.121858741668742,
+                    0.121858741668742,
+                    1.0
+                ],
+                "metallicFactor" : 0.0
+            }
+        },
+        {
+            "name" : "Wood.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.1663314963330551,
+                    0.027845338401873976,
+                    0.0,
+                    1.0
+                ],
+                "metallicFactor" : 0.0
+            }
+        }
+    ],
     "meshes" : [
         {
             "name" : "Cube.001",
@@ -207,14 +233,16 @@
                         "NORMAL" : 2,
                         "POSITION" : 1
                     },
-                    "indices" : 0
+                    "indices" : 0,
+                    "material" : 1
                 },
                 {
                     "attributes" : {
                         "NORMAL" : 5,
                         "POSITION" : 4
                     },
-                    "indices" : 3
+                    "indices" : 3,
+                    "material" : 0
                 }
             ]
         }
