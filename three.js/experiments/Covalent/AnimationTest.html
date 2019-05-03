@@ -34,7 +34,11 @@
 
 
 <body style='margin : 0px; overflow: hidden;'>
-	<form><input id="button" type="submit" name="button" align="right" value="enter"></form>
+	    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+			<button>
+				Stop
+			</button>
+		</div>
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 		<a-assets>
 			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf?version=96e38c4"></a-asset-item>
