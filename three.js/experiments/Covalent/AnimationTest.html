@@ -19,15 +19,14 @@
 	<script>
 		var pause = new Boolean(false);
 		document.querySelector("button").addEventListener("click", (e)=>{			
-			console.log("HIDE OBJECTS")
 			pause = Boolean(pause);
 			if(pause)
 			{
-				document.getElementById('logo').timeScale = 1;
+				document.getElementById('logo').setAttribute('animation-mixer', {timeScale: 0});
 			}
 			else
 			{
-				document.getElementById('logo').timeScale = 0;
+				document.getElementById('logo').setAttribute('animation-mixer', {timeScale: 1});
 			}
 		});
 	</script>
