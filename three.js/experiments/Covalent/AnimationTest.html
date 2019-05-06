@@ -37,6 +37,12 @@
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
-
+	<script>
+	function triggerAnimation(){
+		document.getElementById('logo').setAttribute('animation-mixer', {timeScale: 0});
+	}
+	document.body.addEventListener('click', triggerAnimation)
+	document.body.addEventListener('keypress', triggerAnimation)
+	</script>
 </body>
 </html>
