@@ -37,6 +37,7 @@
 	<script>
 	var play = true;
 	let player = document.querySelector("#logoentity");
+	player.setAttribute('animation-mixer',{clip: "*",loop: "repeat"});
 	document.body.addEventListener('click',function(){
 		if(play)
 		{
