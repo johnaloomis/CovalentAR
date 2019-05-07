@@ -40,12 +40,12 @@
 	document.body.addEventListener('click',function(){
 		if(play)
 		{
-			player.removeAttribute('animation-mixer');
+			player.setAttribute('animation-mixer',{timeScale: 0});
 			play = false;
 		}
 		else
 		{
-			player.setAttribute('animation-mixer',{clip: "*",loop: "repeat"});
+			player.setAttribute('animation-mixer',{timeScale: 1});
 			play = true;
 		}
 		});
