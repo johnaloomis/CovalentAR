@@ -26,22 +26,29 @@
 		<a-assets>
 			<a-asset-item id='logo' src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf?version=96e38c4"></a-asset-item>
 		</a-assets>
-        <a-marker preset='pattern' type='pattern' url='pattern-marker.patt'>
+        <a-marker id='marker' preset='pattern' type='pattern' url='pattern-marker.patt'>
 		<!-- to find animation name go to https://gltf-viewer.donmccurdy.com/ -->
-			<a-entity id='logoentity' gltf-model="#logo" animation-mixer="clip: CubeAction">
+			<a-entity id='logoentity' gltf-model="#logo" >
 
 			</a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
 	<script>
-	function triggerAnimation(){
-		document.getElementById('logoentity').setAttribute('animation-mixer', {timeScale: 0});
+	
+	let player = document.querySelector("#logoentity");
+	document.body.addEventListener('click',function(){
 
 
-	}
-	document.body.addEventListener('click', triggerAnimation)
-	document.body.addEventListener('keypress', triggerAnimation)
+		//add the event listener to handle post animation before starting animations (use once to help with cleanup)
+		player.addEventListener('animation-finished',function() {
+			
+			player.removeAttribute('animation-mixer');
+		},{once:true});
+
+		//start the animation by appending the animation-mixer
+		player.setAttribute('animation-mixer',{clip: "*",loop: "repeat", repetitions: 2});
+		});
 	</script>
 </body>
 </html>
