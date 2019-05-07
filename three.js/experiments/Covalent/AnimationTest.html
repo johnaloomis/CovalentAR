@@ -38,13 +38,15 @@
 	var play = true;
 	let player = document.querySelector("#logoentity");
 	document.body.addEventListener('click',function(){
-		if(play == true)
+		if(play)
 		{
 			player.removeAttribute('animation-mixer');
+			play = false;
 		}
 		else
 		{
 			player.setAttribute('animation-mixer',{clip: "*",loop: "repeat"});
+			play = true;
 		}
 		});
 	</script>
