@@ -21,7 +21,8 @@
 
 
 <body style='margin : 0px; overflow: hidden;'>
-
+    <button type="button" id="pause">Pause</button>
+    <button type="button" id="reset">Reset</button>
     <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false;">
         <a-assets>
             <a-asset-item id='logo' src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf"></a-asset-item>
@@ -34,11 +35,11 @@
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
-	<script>
+    <script>
 	var play = true;
 	let player = document.querySelector("#logoentity");
 	player.setAttribute('animation-mixer',{clip: "*",loop: "repeat"});
-	document.body.addEventListener('click',function(){
+	document.getElementById("pause").addEventListener('click', function () {
 		if(play)
 		{
 			player.setAttribute('animation-mixer',{timeScale: 0});
@@ -49,7 +50,11 @@
 			player.setAttribute('animation-mixer',{timeScale: 1});
 			play = true;
 		}
-		});
-	</script>
+	});
+	document.getElementById("reset").addEventListener('click', function () {
+	    player.setAttribute('animation-mixer', { clip: "*", loop: "repeat", timeScale: 1});
+
+	});
+    </script>
 </body>
 </html>
