@@ -21,40 +21,42 @@
 
 
 <body style='margin : 0px; overflow: hidden;'>
-    <button type="button" id="pause">Pause</button>
-    <button type="button" id="reset">Reset</button>
-    <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false;">
-        <a-assets>
-            <a-asset-item id='logo' src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf"></a-asset-item>
-        </a-assets>
-        <a-marker id='marker' preset='pattern' type='pattern' url='pattern-marker.patt'>
-            <!-- to find animation name go to https://gltf-viewer.donmccurdy.com/ -->
-            <a-entity id='logoentity' gltf-model="#logo">
+    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+        <button type="button" id="pause">Pause</button>
+        <button type="button" id="reset">Reset</button>
+     </div>
+     <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false;">
+         <a-assets>
+                <a-asset-item id='logo' src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf"></a-asset-item>
+         </a-assets>
+         <a-marker id='marker' preset='pattern' type='pattern' url='pattern-marker.patt'>
+                <!-- to find animation name go to https://gltf-viewer.donmccurdy.com/ -->
+                <a-entity id='logoentity' gltf-model="#logo">
 
-            </a-entity>
-        </a-marker>
-        <a-entity camera></a-entity>
-    </a-scene>
+                </a-entity>
+         </a-marker>
+         <a-entity camera></a-entity>
+      </a-scene>
     <script>
-	var play = true;
-	let player = document.querySelector("#logoentity");
-	player.setAttribute('animation-mixer',{clip: "*",loop: "repeat"});
-	document.getElementById("pause").addEventListener('click', function () {
-		if(play)
-		{
-			player.setAttribute('animation-mixer',{timeScale: 0});
-			play = false;
-		}
-		else
-		{
-			player.setAttribute('animation-mixer',{timeScale: 1});
-			play = true;
-		}
-	});
-	document.getElementById("reset").addEventListener('click', function () {
-	    player.setAttribute('animation-mixer', { clip: "*", loop: "repeat", timeScale: 1});
+	    var play = true;
+	    let player = document.querySelector("#logoentity");
+	    player.setAttribute('animation-mixer',{clip: "*",loop: "repeat"});
+	    document.getElementById("pause").addEventListener('click', function () {
+		    if(play)
+		    {
+			    player.setAttribute('animation-mixer',{timeScale: 0});
+			    play = false;
+		    }
+		    else
+		    {
+			    player.setAttribute('animation-mixer',{timeScale: 1});
+			    play = true;
+		    }
+	    });
+	    document.getElementById("reset").addEventListener('click', function () {
+	        player.setAttribute('animation-mixer', { clip: "*", loop: "repeat", timeScale: 1});
 
-	});
+	    });
     </script>
 </body>
 </html>
