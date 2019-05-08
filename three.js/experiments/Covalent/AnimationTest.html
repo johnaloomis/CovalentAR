@@ -20,23 +20,24 @@
 
 
 
-<body >
-    <div style=' top: 10px; width:100%; text-align: center; z-index: 1;'>
+<body>
+
+    <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false;">
+        <a-assets>
+            <a-asset-item id='logo' src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf"></a-asset-item>
+        </a-assets>
+        <a-marker id='marker' preset='pattern' type='pattern' url='pattern-marker.patt'>
+            <!-- to find animation name go to https://gltf-viewer.donmccurdy.com/ -->
+            <a-entity id='logoentity' gltf-model="#logo">
+
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+    <div style='position:absolute; bottom:10px ; width:100%; text-align: center; '>
         <button type="button" id="pause">Pause</button>
         <button type="button" id="reset">Reset</button>
-     </div>
-     <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false;">
-         <a-assets>
-                <a-asset-item id='logo' src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Axe/axe.gltf"></a-asset-item>
-         </a-assets>
-         <a-marker id='marker' preset='pattern' type='pattern' url='pattern-marker.patt'>
-                <!-- to find animation name go to https://gltf-viewer.donmccurdy.com/ -->
-                <a-entity id='logoentity' gltf-model="#logo">
-
-                </a-entity>
-         </a-marker>
-         <a-entity camera></a-entity>
-      </a-scene>
+    </div>
     <script>
 	    var play = true;
 	    let player = document.querySelector("#logoentity");
@@ -54,7 +55,8 @@
 		    }
 	    });
 	    document.getElementById("reset").addEventListener('click', function () {
-	        player.setAttribute('animation-mixer', { clip: "*", loop: "repeat", timeScale: 1});
+	        player.removeAttribute('animation-mixer');
+	        player.setAttribute('animation-mixer', { clip: "*", loop: "repeat" });
 
 	    });
     </script>
