@@ -21,14 +21,12 @@
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 		
         <a-assets>
-			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Test/WaterBottle.gltf"></a-asset-item>
+			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Pepsi/pepsi.glb"></a-asset-item>
 		</a-assets>
 		
 		<a-marker preset='pattern' type='pattern' url="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/markers/Pepsi/pattern-Pepsi-Logo.patt">
-			<a-entity gltf-model="#logo" scale="5 5 5">
-
-			</a-entity>
-			<a-entity light="color: #AFA; intensity: 1.5" position="-1 1 0"></a-entity>
+			
+			<a-entity gltf-model="#logo" ></a-entity>
 
         </a-marker>
         <a-entity camera></a-entity>
