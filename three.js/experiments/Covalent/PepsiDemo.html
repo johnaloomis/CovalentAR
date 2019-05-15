@@ -18,7 +18,7 @@
 
 
 <body style='margin : 0px; overflow: hidden;'>
-    <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false' light="defaultLightsEnabled: false">
+    <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false' >
 		
         <a-assets>
 			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Pepsi/pepsi.glb"></a-asset-item>
@@ -27,10 +27,10 @@
 		<a-marker preset='pattern' type='pattern' url="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/markers/Pepsi/pattern-Pepsi-Logo.patt">
 			
 			<a-entity gltf-model="#logo" ></a-entity>
-			<a-entity light="type: directional; color: #FFF; intensity: 2" ></a-entity>
+			
 		</a-marker>
 
-		<a-entity light="type: ambient; color: #BBB"></a-entity>
+		<a-entity light="type: ambient; color: #DDD"></a-entity>
 		
         <a-entity camera>
 		
