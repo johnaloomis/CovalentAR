@@ -15,6 +15,7 @@
 -->
 <!--https://blog.theodo.com/2018/09/build-first-ar-web-app-less-10mn/ -->
 <script src="https://johnaloomis.github.io/CovalentAR/aframe/build/aframe-ar.js"></script>
+<script src="https://github.com/donmccurdy/three-gltf-viewer/blob/master/src/viewer.js"></script>
 
 
 <body style='margin : 0px; overflow: hidden;'>
@@ -30,8 +31,9 @@
 			
 		</a-marker>
 
-		<a-entity light="type: ambient; color: #CCC; intensity: 2"></a-entity>
-		<a-entity light="type: hemisphere; color: #FF1; groundColor: #33C; intensity: 2"></a-entity>
+		<a-entity light="type: ambient; color: #FFF; intensity: 5"></a-entity>
+		<a-entity light="type: hemisphere; color: #FF1; groundColor: #33C; intensity: 10"></a-entity>
+		<a-entity light="type: directional; color: #FFF; intensity: 4" position="-1 1 0"></a-entity>
 
 		
         <a-entity camera>
