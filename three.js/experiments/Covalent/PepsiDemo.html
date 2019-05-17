@@ -20,7 +20,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
 	
-    <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false' >
+    <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false' cursor="rayOrigin: mouse" >
 		
         <a-assets>
 			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Pepsi/pepsi.glb"></a-asset-item>
@@ -63,8 +63,8 @@
 			<a-entity light="type: spot; color: #FFF; intensity: 0.5; angle: 180" position="-5 10 -10"></a-entity>
 			
 
-			<a-entity geometry="primitive: plane; height: .5; width: 1.1" material="side: double; color: red" position="0.01 2 0"> </a-entity>
-			<a-text id="myText" value="Click Here" color="black" position="-.5 2 .01"  ></a-text>
+			<a-entity id="myText" geometry="primitive: plane; height: .5; width: 1.1" material="side: double; color: red" position="0.01 2 0"> </a-entity>
+			<a-text value="Click Here" color="black" position="-.5 2 .01"  ></a-text>
 			<a-text value="Click Here" color="black" rotation="180 0 180" position=".52 2 -.01" ></a-text>
 			
 		</a-marker>
@@ -90,9 +90,15 @@
 
 
 <script>
-    plane.addEventListener('click', function (evt) {
+    AFRAME.registerComponent("foo", {
+    init: function() {
+      var redirect = document.querySelector('myText');
+
+      redirect.addEventListener('click', () => {
         location.href = "https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/Covalent.html";
-    });
+      })
+    }
+  })
 </script>
 </html>
 
