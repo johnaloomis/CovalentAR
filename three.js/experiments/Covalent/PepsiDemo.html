@@ -23,7 +23,7 @@
       const redirect = document.querySelector('#myText');
 
       redirect.addEventListener('click', function (evt) {
-        window.location.href = "https://covalentreality.co/";
+        window.location.replace("http://www.w3schools.com");
       })
     }
   })
@@ -31,7 +31,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
 	
-    <a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false'  >
+    <a-scene emitevents="true" cursor="rayOrigin: mouse" embedded arjs='trackingMethod: best; debugUIEnabled: false'  >
 		
         <a-assets>
 			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Pepsi/pepsi.glb"></a-asset-item>
@@ -74,7 +74,7 @@
 			<a-entity light="type: spot; color: #FFF; intensity: 0.5; angle: 180" position="-5 10 -10"></a-entity>
 			
 
-			<a-entity id="myText" redir emitevents="true" cursor="rayOrigin: mouse" geometry="primitive: plane; height: .5; width: 1.1" material="side: double; color: red" position="0.01 2 0" > </a-entity>
+			<a-entity id="myText" redir geometry="primitive: plane; height: .5; width: 1.1" material="side: double; color: red" position="0.01 2 0" > </a-entity>
 			<a-text value="Click Here" color="black" position="-.5 2 .01"  ></a-text>
 			<a-text value="Click Here" color="black" rotation="180 0 180" position=".52 2 -.01" ></a-text>
 			
