@@ -18,21 +18,14 @@
 <script src="https://github.com/donmccurdy/three-gltf-viewer/blob/master/src/viewer.js"></script>
 
 <script>
-    AFRAME.registerComponent('marker', {
+    AFRAME.registerComponent('cursor-listener', {
     init: function() {
-      const redirect1 = document.getElementById("selectBox");
-	  const redirect2 = document.getElementById("selectTextFront");
-	  const redirect3 = document.getElementById("selectTextBack");
+      
 
-      redirect1.addEventListener('click', function (evt) {
+      this.e1.addEventListener('click', function (evt) {
         window.location.replace("https://covalentreality.co/");
       })
-	  redirect2.addEventListener('click', function (evt) {
-        window.location.replace("https://covalentreality.co/");
-      })
-	  redirect3.addEventListener('click', function (evt) {
-        window.location.replace("https://covalentreality.co/");
-      })
+	  
 
     }
   })
@@ -46,7 +39,7 @@
 			<a-asset-item id="logo" src="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/models/Pepsi/pepsi.glb"></a-asset-item>
 		</a-assets>
 		
-		<a-marker marker emitevents="true" cursor="rayOrigin: mouse" preset='pattern' type='pattern' url="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/markers/Pepsi/pattern-Pepsi-Logo.patt">
+		<a-marker emitevents="true" cursor="rayOrigin: mouse" preset='pattern' type='pattern' url="https://johnaloomis.github.io/CovalentAR/three.js/experiments/Covalent/markers/Pepsi/pattern-Pepsi-Logo.patt">
 			
 
 			<a-entity gltf-model="#logo" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear"></a-entity>
@@ -83,9 +76,9 @@
 			<a-entity light="type: spot; color: #FFF; intensity: 0.5; angle: 180" position="-5 10 -10"></a-entity>
 			
 
-			<a-entity id="selectBox" geometry="primitive: plane; height: .5; width: 1.1" material="side: double; color: red" position="0.01 2 0" ></a-entity>
-			<a-text id="selectTextFront" value="Click Here" color="black" position="-0.5  2  0.01"  ></a-text>
-			<a-text id="selectTextBack" value="Click Here" color="black" position=" 0.52 2 -0.01" rotation="180 0 180" ></a-text>
+			<a-entity cursor-listener id="selectBox" geometry="primitive: plane; height: .5; width: 1.1" material="side: double; color: red" position="0.01 2 0" ></a-entity>
+			<a-text cursor-listener id="selectTextFront" value="Click Here" color="black" position="-0.5  2  0.01"  ></a-text>
+			<a-text cursor-listener id="selectTextBack" value="Click Here" color="black" position=" 0.52 2 -0.01" rotation="180 0 180" ></a-text>
 			
 		</a-marker>
 
